@@ -1,0 +1,29 @@
+{
+  "name": "webpack-examples",
+  "version": "1.0.0",
+  "description": "Pack with some webpack examples (From basic to advanced configurations).",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baldore/webpack-examples.git"
+  },
+  "author": "Camilo Orrego <acornssn@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baldore/webpack-examples/issues"
+  },
+  "homepage": "https://github.com/baldore/webpack-examples#readme",
+  "devDependencies": {
+    "webpack": "1.13.1"
+  },
+  "dependencies": {
+    "handlebars": "4.0.5"
+  }
+}
