@@ -1,5 +1,7 @@
 'use strict';
 
+require('../styles/main.scss');
+
 const users = require('./data');
 const renderUsers = require('./renderUsers');
 
