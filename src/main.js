@@ -1,9 +1,7 @@
-'use strict';
+import '../styles/main.scss';
 
-require('../styles/main.scss');
-
-const users = require('./data');
-const renderUsers = require('./renderUsers');
+import users from './data';
+import renderUsers from './renderUsers';
 
 const $container = document.querySelector('#users-container');
 $container.innerHTML = renderUsers(users);

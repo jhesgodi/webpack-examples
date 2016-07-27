@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "users": [
     {
       "userId": 1,
@@ -25,4 +25,4 @@ module.exports = {
       "body": "ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident rerum culpa quis hic commodi nesciunt rem tenetur doloremque ipsam iure quis sunt voluptatem rerum illo velit"
     }
   ]
-}
+};

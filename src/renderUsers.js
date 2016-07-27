@@ -1,6 +1,4 @@
-'use strict';
-
-const Handlebars = require('handlebars/dist/handlebars.min');
+import Handlebars from 'handlebars/dist/handlebars.min';
 
 const template = `
 <div class="users">
@@ -12,4 +10,4 @@ function renderUsers(users) {
   return Handlebars.compile(template)(users);
 }
 
-module.exports = renderUsers;
+export default renderUsers;
