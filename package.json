@@ -8,7 +8,8 @@
   },
   "scripts": {
     "webpack:dev": "webpack -w",
-    "build": "webpack"
+    "build": "webpack",
+    "dev:03": "cd ./examples/03 && webpack -w"
   },
   "repository": {
     "type": "git",

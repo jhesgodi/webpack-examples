@@ -33,3 +33,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
   ]
 };
+
+if (module.hot) {
+
+}
