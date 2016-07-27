@@ -14,3 +14,7 @@ Pack with some webpack examples (From basic to advanced configurations).
 ## Additional Recommendations 
 
 - Don't use phantom.js for testing. Use Node.js directly instead.
+
+## Additional Resources
+
+- https://github.com/webpack/docs/wiki/optimization
