@@ -10,6 +10,7 @@
     "webpack:dev": "webpack -w",
     "build": "webpack",
     "dev:01": "cd ./examples/01 && webpack -w",
+    "dev:02": "cd ./examples/02 && webpack -w",
     "dev:03": "cd ./examples/03 && webpack -w"
   },
   "repository": {
