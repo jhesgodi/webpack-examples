@@ -4,7 +4,10 @@ const Handlebars = require('handlebars/dist/handlebars.min');
 
 const template = `
 <div class="users">
-  {{#each users}}<h2>{{title}}</h2>{{/each}}
+  {{#each users}}
+    <h2>{{name}}</h2>
+    <p>{{body}}</p>
+  {{/each}}
 </div>
 `;
 
