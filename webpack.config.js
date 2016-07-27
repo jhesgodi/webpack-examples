@@ -1,6 +1,7 @@
 'use strict';
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/main.js',
@@ -17,9 +18,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css?sourceMap', 'sass'],
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap', 'sass'),
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  plugins: [
+    // Extracts the css in a different file
+    new ExtractTextPlugin('bundle.css', { allChunks: true }),
+
+    // Optimization configuration.
+    // For more information: https://github.com/webpack/docs/wiki/optimization
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+  ]
 };
