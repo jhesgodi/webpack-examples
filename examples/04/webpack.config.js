@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: './dist/',
     publicPath: `http://0.0.0.0:${webpackPort}/dist/`, // This is needed to make the magic work!!!
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
 
   devtool: '#eval-source-map',
@@ -24,11 +24,11 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
     host: '0.0.0.0',
+    port: webpackPort, // You work on this one
     hot: true,
     inline: true,
     progress: true,
     stats: 'errors-only',
-    port: webpackPort, // You work on this oneThis is the one from
     proxy: {
       '*': `http://localhost:3001` // This is your server
     }
