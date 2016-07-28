@@ -7,7 +7,7 @@ const webpackPort = 3000;
 module.exports = {
   entry: {
     bundle: [
-      'webpack/hot/only-dev-server',
+      'webpack/hot/only-dev-server', // This needs to be here!!!
       './src/main.js'
     ],
   },
