@@ -11,7 +11,8 @@
     "build": "webpack",
     "dev:01": "cd ./examples/01 && webpack -w",
     "dev:02": "cd ./examples/02 && webpack -w",
-    "dev:03": "cd ./examples/03 && webpack -w"
+    "dev:03": "cd ./examples/03 && webpack -w",
+    "dev:04": "cd ./examples/04 && node server & cd ./examples/04 && webpack -w"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "babel-preset-es2015": "6.9.0",
     "babel-preset-stage-2": "6.11.0",
     "css-loader": "0.23.1",
+    "extract-text-webpack-plugin": "1.0.1",
     "json-loader": "0.5.4",
     "node-sass": "3.8.0",
     "sass-loader": "4.0.0",
@@ -35,6 +37,7 @@
     "webpack": "1.13.1"
   },
   "dependencies": {
+    "express": "4.14.0",
     "handlebars": "4.0.5"
   }
 }
