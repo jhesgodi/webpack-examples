@@ -1,14 +1,39 @@
 'use strict';
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
+const webpackPort = 3000;
+
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    bundle: [
+      'webpack/hot/only-dev-server',
+      './src/main.js'
+    ],
+  },
+
   output: {
     path: './dist/',
+    publicPath: `http://0.0.0.0:${webpackPort}/dist/`, // This is needed to make the magic work!!!
     filename: 'bundle.js'
   },
+
+  devtool: '#eval-source-map',
+
+  devServer: {
+    compress: true,
+    historyApiFallback: true,
+    host: '0.0.0.0',
+    hot: true,
+    inline: true,
+    progress: true,
+    stats: 'errors-only',
+    port: webpackPort, // You work on this oneThis is the one from
+    proxy: {
+      '*': `http://localhost:3001` // This is your server
+    }
+  },
+
   module: {
     loaders: [
       {
@@ -18,18 +43,13 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap', 'sass'),
+        loaders: ['style', 'css?sourceMap', 'sass'],
         exclude: /node_modules/
       }
     ]
   },
-  plugins: [
-    // Extracts the css in a different file
-    new ExtractTextPlugin('bundle.css', { allChunks: true }),
 
-    // Optimization configuration.
-    // For more information: https://github.com/webpack/docs/wiki/optimization
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin()
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
   ]
 };

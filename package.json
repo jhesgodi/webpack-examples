@@ -12,7 +12,7 @@
     "dev:01": "cd ./examples/01 && webpack -w",
     "dev:02": "cd ./examples/02 && webpack -w",
     "dev:03": "cd ./examples/03 && webpack -w",
-    "dev:04": "cd ./examples/04 && node server & cd ./examples/04 && webpack -w"
+    "dev:04": "cd ./examples/04 && node server & cd ./examples/04 && webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,8 @@
     "node-sass": "3.8.0",
     "sass-loader": "4.0.0",
     "style-loader": "0.13.1",
-    "webpack": "1.13.1"
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
     "express": "4.14.0",
