@@ -4,11 +4,11 @@ Pack with some webpack examples (From basic to advanced configurations).
 
 ## Examples to create
 
-- [x] Basic example showing modules.
-- [x] Loaders explanation (Add CSS and Babel loaders).
-- [x] Plugins explanation (Add some plugins).
-- [ ] Example with webpack-dev-server (showing configuration inside webpack.config.js). Additionally, show an example with React.
-- [ ] Development - Production configuration.
+1. Basic example showing modules.
+2. Loaders explanation (Add CSS and Babel loaders).
+3. Plugins explanation (Add some plugins).
+4. Basic example with webpack-dev-server.
+5. React with webpack-dev-server.
 
 ## Additional Recommendations
 
