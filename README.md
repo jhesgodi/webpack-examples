@@ -10,6 +10,10 @@ Pack with some webpack examples (From basic to advanced configurations).
 4. Basic example with webpack-dev-server.
 5. React with webpack-dev-server.
 
+## Running the examples
+
+Just run `npm run dev:xx`, where xx is the number of the example (01, 02, etc).
+
 ## Additional Recommendations
 
 - Don't use phantom.js for testing. Use Node.js directly instead. (Explain why).
