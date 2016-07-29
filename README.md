@@ -12,7 +12,7 @@ Pack with some webpack examples (From basic to advanced configurations).
 
 ## Running the examples
 
-Just run `npm run dev:xx`, where xx is the number of the example (01, 02, etc).
+First install the required dependencies using `npm i`. Then, run `npm run dev:xx`, where xx is the number of the example (01, 02, etc). This will run the specific example in development.
 
 ## Additional Recommendations
 
